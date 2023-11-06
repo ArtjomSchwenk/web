@@ -1,0 +1,66 @@
+/* Universal Selektor */
+*{
+    /* font Eigenschfaten werden vererbt*/
+    font-family: sans-serif ;
+    /* box Eigenschaften werden nicht vererbt */
+    color: hsl(0 100% 50%);
+    background: hsl(240 10% 90%);
+}
+
+/* Typ Selektor */
+p{
+    color: hsl(0 0% 10%);
+}
+
+/* Klassen Selektor */
+
+.head-line{
+    color: hsl(0 0% 0%);
+    text-decoration: underline;
+}
+
+/* id Selektor und gleichzeitig ein Nachfahren Selektor
+Kinder >
+Nachfahren Leerstelle
+Ueberschreibt den Klassen Selekto, weit es eine hoere Spezifitaet hat
+*/
+#syntax > h2{
+    text-decoration: none;
+
+}
+
+/* Attribut Selektor*/
+[title]{ 
+    font-style: italic;
+}
+
+/* Pseudo klasse */
+p:hover{
+    background: hsl(0 0% 10%); 
+    color: hsl(240 10% 90%);
+}
+
+/* Strukturelle Pseudo Klasse*/
+li:nth-of-type(odd),
+li:nth-of-type(odd) *{
+    background: hsl(0, 0%, 80%);
+}
+
+/*Jede Liste ist in ihrem article dir letzte oder die erste*/
+article:last-of-type li{
+    list-style: none;
+}
+
+/* Pseudo Elemente*/
+p::selection{
+    color: hsl(0, 100%, 50%);
+    background: hsl(150, 100%, 50%);  
+}
+
+::before{
+    content: "!";
+    color: hsl(240, 100%, 50%);
+    background: hsl(240, 0%, 100%);
+    width: 10%;
+    display: block;
+}
