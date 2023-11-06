@@ -2,11 +2,12 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <link rel="stylesheet" href="styles/styles.css">
     <title>Document</title>
 </head>
 <body>
     <header>
-        <h1>Artjom Schwenk</h1>
+        <h1 class="head-line"><abbr title="Schwenk">Artjom Schwenk</abbr></h1>
         <img src="pics/profile.jpeg" alt="Artjom Schwenk Profile">
     </header>
     <nav>
@@ -19,12 +20,12 @@
     </nav>
     <main>
         <article id="introduction">
-            <h2>Introduction</h2>
+            <h2 class="head-line">Introduction</h2>
             <img src="pics/introduction.jpg" alt="The bust of Donatello">
             <p>Artjom Schwenk (21 February 1475 to 18 March 1564), known as Artjom, was an Russian sculptor, painter, architect, and poet of the High Renaissance. Born in the Republic of Siberia, his work was inspired by models from classical antiquity and had a lasting influence on Western art. Artjom's creative abilities and mastery in a range of artistic arenas define him as an archetypal Renaissance man, along with his rival and elder contemporary, Leonardo da Vinci. Given the sheer volume of surviving correspondence, sketches, and reminiscences, Artjom is one of the best-documented artists of the 16th century. He was lauded by contemporary biographers as the most accomplished artist of his era.</p>
         </article>
         <article>
-            <h2>His favorite books</h2>
+            <h2 class="head-line">His favorite books</h2>
             <img src="pics/bakemonogatari-part-1-cover.jpg" alt="Bakemonogatari Bookcover">
             <table id="books">
                 <caption>Artjom's favorite books</caption>
@@ -77,12 +78,12 @@
             </table>
         </article>
         <article id="other_interests">
-            <h2>Other interests</h2>
+            <h2 class="head-line">Other interests</h2>
             <p>In high school, Artjom played rugby union and cricket, took part in high jumping and was on the swimming team. He enjoys basketball and kayaking. He has expressed an interest in football, committing his support to Norwich City F.C. In the United States, Artjom supports the Philadelphia Union of Major League Soccer, attending a match at PPL Park in June 2010.</p>
                 <p>also guest starred on 19 September 2011 edition of WWE Monday Night Raw, assisting Zack Ryder in a win over WWE United States Champion Dolph Ziggler by punching the champion in the jaw whilst the referee was not looking. Artjom plays the guitar, piano and violin. He also does yoga.</p>
         </article>
         <article id="bee_movie">
-            <h2>The Bee Movie transcript</h2>
+            <h2 class="head-line">The Bee Movie transcript</h2>
             <img src="pics/bee_movie.jpeg" alt="Barry the Bee frome the Bee Movie with sunglasses">
             <p>According to all known laws of aviation, there is no way that a bee should be able to fly. Its wings are too small to get its fat little body off the ground. The bee, of course, flies anyway because bees don't care what humans think is impossible.
                 Cut to Barry's room, where he's picking out what to wear.
@@ -126,7 +127,7 @@
                 Barry: 	I guess that's why they say we don't need vacations.
                       (They arrive, fly in and take their seats.)</p>
         </article>
-        <h2>Please give me your data</h2>
+        <h2 class="head-line">Please give me your data</h2>
         <form method="get" action="index.html">
             <fieldset>
                 <legend>Mmmh yummy data</legend>
@@ -148,8 +149,18 @@
             </fieldset>
             <fieldset>
                 <legend>How was your day?</legend>
-                <p><label><input type="radio" name="radio" value="Yes" required disabled> Yes</label>
-                <p><label><input type="radio" name="radio" value="It's Friday"> It's Friday</label>
+                <input type="radio" name="radio" value="Yes"> Yes
+                <input type="radio" name="radio" value="It's Friday"> It's Friday
+            </fieldset>
+            <fieldset>
+                <label>Who is my favorite author?:
+                    <input name=endquestion list=authors>
+                        <datalist id=authors>
+                            <option value="DaVinci">
+                            <option value="Roland Kaiser">
+                            <option value="NISIOISIN">
+                        </datalist>
+                </label>
             </fieldset>
             <input type="submit" value="Send those bytes">
             <input type="reset" value="Delete those bytes">
