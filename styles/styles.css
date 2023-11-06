@@ -1,0 +1,47 @@
+:root{
+    --main-color: hsl(0, 100%, 30%);
+    --secondary-color: hsl(50, 100%, 50%);
+    --bg-color: hsl(0, 0%, 50%);
+    --bg-secondary-color: hsl(0, 1%, 39%);
+    --basic-font-size: 16px;
+}
+
+*{
+    font-family: 'Courier New', Courier, monospace;
+    background: var(--bg-color);
+}
+
+.head-line{
+    /*color: var(--main-color);*/
+    color: var(--main-color);
+    text-decoration: underline;
+}
+
+p{
+    color: hsl(0, 100%, 0%);
+}
+
+p,li{
+    max-width: 60ch;
+}
+
+img{
+    max-width: 30%;
+}
+
+#introduction > p{
+    font-family: 'Times New Roman', Times, serif;
+    font-style: italic;
+}
+
+[title]{
+    background: var(--secondary-color);
+}
+
+td:hover{
+    background: var(--bg-secondary-color);
+}
+
+p::selection{
+    background: var(--secondary-color);
+}
