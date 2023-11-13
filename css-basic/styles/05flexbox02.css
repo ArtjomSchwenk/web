@@ -1,0 +1,50 @@
+*,
+*::after,
+*::before{
+    box-sizing: border-box;
+}
+
+:root{
+    font-family: sans-serif;
+}
+
+#expContainer > div{
+    background: hsl(240, 50%, 95%);
+    /* height nur um die vertikale Ausrichtung zu zeigen*/
+    height: 10em;
+    /* Container setzen*/
+    display: flex;
+    /* Achsen sichtbar und wartbar festlegen */
+    flex-flow: row wrap;
+    /* Ausrichtung Hautachse*/
+    justify-content: flex-start;
+    /* Ausrichtung an der Kreuzachse */
+    align-items: flex-start;
+    /* Ausrichtung an der Kreuzache fier multilined Container, das heisst, wrap muss gesetzt sein! */
+    align-content: center;
+}
+
+/* Responsive web design (RWD)
+Ohne media query: intrinsic RWD*/
+nav ul{
+    list-style: none;
+    padding: 0;
+}
+
+nav li{
+    background: hsl(240, 50%, 95%);
+    margin: .5%;
+}
+/* Flex Properties */
+nav ul{
+    display: flex;
+    gap: 1%;
+    /* Achsen setzen*/
+    flex-flow: row wrap;
+    justify-content: center;
+}
+
+/* Flex items */
+nav li{
+    flex: 0 1 32em;
+} 

@@ -8,6 +8,7 @@
 
 *{
     font-family: 'Courier New', Courier, monospace;
+    font-size: var(--basic-font-size);
     background: var(--bg-color);
 }
 
@@ -42,9 +43,9 @@ th, td{
     width: 10%;
 }
 
-/**p,li{
-    text-align: center;
-}**/
+th{
+    font-style: italic;
+}
 
 img{
     max-width: 40%;
@@ -53,6 +54,10 @@ img{
 #introduction > p{
     font-family: 'Times New Roman', Times, serif;
     font-style: italic;
+}
+
+#other_interests > p:hover{
+    font-size: large;
 }
 
 [title]{
