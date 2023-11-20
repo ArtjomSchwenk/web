@@ -37,13 +37,10 @@ main{
     grid-template-areas: 
     "head   head"
     "cont1  cont2"
-    "cont3  cont3"
+    "cont3  cont4"
     "foot   foot"
     ;
-    gap: 2%;
-    justify-content: center;
-    align-items: center;
-    grid-column: auto;
+    justify-content: space-between;
 }
 
 #introduction{
@@ -63,7 +60,7 @@ main{
 }
 
 #form{
-    grid-area: foot;
+    grid-area: cont4;
 }
 
 img{
@@ -73,7 +70,6 @@ img{
 
 p{
     max-width: var(--max-text-lenght);
-    /*padding: 0rem 0rem 2rem 0rem;*/
 }
 
 table, th, td {
