@@ -1,0 +1,77 @@
+*,
+*::after,
+*::before{
+    box-sizing: border-box;
+    
+}
+
+:root{
+    --main-color: hsl(0, 100%, 30%);
+    --secondary-color: hsl(50, 100%, 50%);
+    --bg-color: hsl(0, 0%, 50%);
+    --bg-secondary-color: hsl(0, 1%, 39%);
+    
+    --basic-font-size: 16px;
+    --max-text-lenght: 60ch;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: var(--basic-font-size);
+    line-height: 1.3;
+   
+    text-align: center;
+    background: var(--bg-color);
+}
+
+.head-line{
+    padding: 1rem 0rem 0rem 0rem;
+}
+
+
+nav li{
+    margin: .5%;
+}
+
+nav ul{
+    background: var(--bg-secondary-color);
+    display: flex;
+    flex-flow: column;
+    list-style: none;
+    padding: 0;
+}
+
+main{
+    display: flex;
+    flex: auto;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+}
+
+img{
+    max-width: 100%;
+    width: 20rem;
+}
+
+p{
+    max-width: var(--max-text-lenght);
+    padding: 0rem 0rem 2rem 0rem;
+}
+
+table, th, td {
+    border: 1px solid;
+    border-collapse: collapse;
+}
+
+th, td{
+    height: 2rem;
+    width: 10%;
+}
+
+form{
+    max-width: var(--max-text-lenght);
+    padding: 3rem 0rem 0rem 0rem;
+}
+
+footer{
+    display: flex;
+    flex: auto;
+    justify-content: end;
+}

@@ -1,0 +1,59 @@
+:root{
+
+}
+/*
+nav > ul{
+    display: grid;
+    grid-template-columns: 10% 20% 30% 20% 100px;
+    grid-template-columns: 20% 20% 20% 20% 20%;
+    grid-template-columns: repeat(5, 20%);
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-columns: 1fr 3fr 1fr;
+    grid-template-columns: repeat(4,1fr) 80px;
+    grid-template-columns: repeat(2, 1fr 3fr);
+}
+*/
+/* RWD ohne Query mit grid 
+RAM: repeat() - auto-fit - minmax()
+<30em mobilgroesse*/
+nav > ul{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(20em, 1fr));
+    gap: 1%
+}
+
+h2::first-letter{
+    color: hsl(0, 100%, 50%);
+}
+
+/* benannte area */
+main{
+    display: grid;
+    /* area deklaration */
+    grid-template-areas:
+        "head   head"
+        "cont1  cont2"
+        "foot   foot"
+    ;
+    gap: 2%;
+}
+
+#grid{
+    grid-area: head;
+}
+
+#gridContainer{
+    grid-area: cont2;
+}
+
+#gridPropsContainer{
+    background: hsl(0, 100%, 50%);
+}
+
+#gridPropsItem{
+    grid-area: 3 / 1/ -1 /-1;
+}
+
+footer{
+    grid-area: foot;
+}

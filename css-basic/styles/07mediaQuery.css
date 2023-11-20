@@ -1,0 +1,56 @@
+img{
+    max-width: 100%;
+}
+
+p{
+    max-width: 60ch;
+    margin: 2% auto;
+    padding: 2%;
+    background: hsl(0, 0%, 80% / 1);
+}
+
+div{
+    display: grid;
+    grid-template-columns: repeat(auto-fit);
+    justify-content: center;
+    gap: 1%;
+}
+/* Abfrage fuer viewport */
+@media screen and (max-width: 35em){
+    p{
+        font-size: 1.8rem;
+        background: hsl(0, 0%, 95% / 1);
+    }
+}
+
+h1,
+h2{
+    font-size: 2rem;
+    text-align: center;
+}
+
+@media print{
+    form{
+        display: none;
+    }
+    div{
+        display: block;
+    }
+    p{
+        font-size: 18pt;
+    }
+    a::after{
+        content: attr(href);
+        display: block;
+    }
+}
+
+@media (prefers-color-scheme: dark){
+    p{
+        background: hsl(0, 0%, 0%);
+        color: hsl(0, 100%, 95%);
+    }
+    a{
+        color: hsl(240, 100%, 95%);
+    }
+}
