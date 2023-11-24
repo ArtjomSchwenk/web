@@ -11,29 +11,36 @@
     --bg-color: hsl(0, 0%, 50%);
     --bg-secondary-color: hsl(0, 1%, 39%);
     
+    --basic-font-size: 16px;
     --max-text-lenght: 60ch;
     font-family: 'Courier New', Courier, monospace;
-    font-size: 16px;
+    font-size: var(--basic-font-size);
     line-height: 1.3;
-    
+   
+    text-align: center;
     background: var(--bg-color);
 }
+
+/*.head-line{
+    padding: 1rem 0rem 0rem 0rem;
+}*/
 
 nav > ul{
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(20em, 1fr));
     list-style: none;
+    background: var(--bg-secondary-color);
 }
 
 main{
     display: grid;
     grid-template-areas: 
-    "head  head"
+    "head   head"
     "cont1  cont2"
     "cont3  cont4"
-    "foot   foot"  
+    "foot   foot"
     ;
-    gap: 3%;
+    justify-content: space-between;
 }
 
 #introduction{
@@ -45,7 +52,7 @@ main{
 }
 
 #other_interests{
-    grid-area: cont4;
+    grid-area: cont3;
 }
 
 #bee_movie{
@@ -53,11 +60,7 @@ main{
 }
 
 #form{
-    grid-area: cont3;
-}
-
-footer{
-    grid-area: foot;
+    grid-area: cont4;
 }
 
 img{
@@ -69,61 +72,23 @@ p{
     max-width: var(--max-text-lenght);
 }
 
-table,
-th,
-td{
+table, th, td {
     border: 1px solid;
     border-collapse: collapse;
 }
 
-th,
-td{
+th, td{
     height: 2rem;
     width: 10%;
 }
 
-/* media queries*/
-@media screen and (max-width: 40em){
-    p{
-        font-size: 1.5rem;
-    }
-    
-    main{
-        display: grid;
-        grid-template-areas:
-        "head"
-        "cont1"
-        "cont2"
-        "cont3"
-        "cont4"
-        "foot";
-        align-items: baseline;
-    }
+form{
+    max-width: var(--max-text-lenght);
+    padding: 3rem 0rem 0rem 0rem;
+}
 
-    table{
-        border: 0;
-    }
-    tr{
-        display: block;
-        margin: .5%;
-    }
-    tr:nth-of-type(2n){
-    background: var(--bg-secondary-color)
-    }
-    td::before{
-        content: attr(data-label);
-        font-weight: bold;
-    }
-    td{
-        display: flex;
-        flex-flow: row wrap;
-        justify-content: space-between;
-        height: auto;
-        width: 96vw;
-
-    }
-    thead{
-        display: none;
-    }
-
+footer{
+    display: flex;
+    flex: auto;
+    justify-content: end;
 }
